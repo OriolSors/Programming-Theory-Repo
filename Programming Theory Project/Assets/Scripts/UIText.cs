@@ -17,6 +17,7 @@ public class UIText : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        // ENCAPSULATION
         int year = playerScript.year;
         planeYearText.text = "Plane Year: " + year;
     }

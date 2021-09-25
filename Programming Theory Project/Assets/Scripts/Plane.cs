@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+// INHERITANCE
 public class Plane : Vehicle
 {
     [SerializeField]
@@ -21,6 +22,8 @@ public class Plane : Vehicle
     void Start()
     {
         year = 2021;
+
+        // ABSTRACTION
         InitRb();
         StartingForce();
     }
@@ -28,6 +31,7 @@ public class Plane : Vehicle
     // Update is called once per frame
     void FixedUpdate()
     {
+        // ABSTRACTION
         CheckPlaneWheels();
         Move();
         ConstForward();
@@ -43,6 +47,7 @@ public class Plane : Vehicle
         playerRb.AddForce(transform.forward * forwardSpeed, ForceMode.Impulse);
     }
 
+    // POLYMORPHISM
     public override void Move()
     {
         float horizontalInput = Input.GetAxis("Horizontal");

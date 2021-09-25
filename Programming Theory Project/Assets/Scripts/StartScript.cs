@@ -1,12 +1,10 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
-public abstract class Vehicle : MonoBehaviour
+public class StartScript : MonoBehaviour
 {
-    // ENCAPSULATION
-    public int year { get; protected set; }
-
     // Start is called before the first frame update
     void Start()
     {
@@ -19,5 +17,8 @@ public abstract class Vehicle : MonoBehaviour
         
     }
 
-    public abstract void Move();
+    public void StartPlaying()
+    {
+        SceneManager.LoadScene(1);
+    }
 }
